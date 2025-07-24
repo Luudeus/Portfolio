@@ -8,6 +8,8 @@ Un sitio web moderno y optimizado construido con Astro, diseñado para destacar 
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
+> **Nota**: Este proyecto está basado en el **Blog Template oficial de Astro**, adaptado como portfolio personal. Incluye funcionalidad de blog opcional que puedes implementar para compartir artículos técnicos y proyectos.
+
 ## ✨ Características
 
 - **🎨 Diseño Moderno**: Interfaz elegante con gradientes dinámicos y efectos visuales
@@ -19,6 +21,8 @@ Un sitio web moderno y optimizado construido con Astro, diseñado para destacar 
 - **🌟 Animaciones Fluidas**: Efectos de entrada progresivos y transiciones suaves
 - **♿ Accesible**: Cumple con estándares de accesibilidad web
 - **🔍 SEO Optimizado**: Meta tags y estructura semántica
+- **📝 Blog Opcional**: Sistema de blog integrado con soporte para Markdown
+- **🗂️ Navegación Completa**: Múltiples secciones (Experiencia, Proyectos, Sobre Mí, Contacto)
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -27,11 +31,11 @@ Un sitio web moderno y optimizado construido con Astro, diseñado para destacar 
 - **TypeScript** - Tipado estático para JavaScript
 - **CSS3** - Estilos personalizados con CSS Grid y Flexbox
 - **Astro:assets** - Optimización automática de imágenes
+- **Markdown** - Para contenido de blog (opcional)
 
 ### Herramientas de Desarrollo
 - **Vite** - Build tool y desarrollo
 - **Sharp** - Procesamiento de imágenes
-- **ESLint** - Linting de código
 
 ## 🚀 Inicio Rápido
 
@@ -44,10 +48,10 @@ Un sitio web moderno y optimizado construido con Astro, diseñado para destacar 
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/tuusuario/portfolio-luciano-cabrales.git
+git clone https://github.com/Luudeus/Portfolio.git
 
 # Navegar al directorio
-cd portfolio-luciano-cabrales
+cd Portfolio
 
 # Instalar dependencias
 npm install
@@ -82,24 +86,41 @@ npm run preview
 /
 ├── public/
 │   ├── favicon.svg
-│   └── assets/
-│       ├── Luciano_Cabrales_CV.pdf
-│       └── round_pfp.png
+│   └── blog/                     # Assets para posts del blog (opcional)
 ├── src/
-│   ├── components/
-│   │   ├── BaseHead.astro
-│   │   ├── Header.astro
-│   │   └── Footer.astro
-│   ├── layouts/
-│   ├── pages/
-│   │   ├── index.astro
-│   │   └── contacto.astro
 │   ├── assets/
-│   │   ├── round_pfp.png
+│   │   ├── round_pfp.png        # Foto de perfil
 │   │   └── Luciano_Cabrales_CV.pdf
-│   └── consts.ts
+│   ├── components/
+│   │   ├── BaseHead.astro       # Meta tags y SEO
+│   │   ├── Header.astro         # Navegación principal
+│   │   ├── Footer.astro         # Pie de página
+│   │   ├── FormattedDate.astro  # Componente de fecha para blog
+│   │   └── HeaderLink.astro     # Enlaces de navegación
+│   ├── content/
+│   │   └── blog/                # Posts del blog (Markdown)
+│   │       ├── first-post.md    # Post de ejemplo (opcional)
+│   │       └── ...              # Más posts
+│   ├── layouts/
+│   │   ├── Layout.astro         # Layout base
+│   │   └── BlogPost.astro       # Layout para posts de blog
+│   ├── pages/
+│   │   ├── index.astro          # Página principal (portfolio)
+│   │   ├── experiencia.astro    # Página de experiencia laboral
+│   │   ├── proyectos.astro      # Página de proyectos
+│   │   ├── sobre-mi.astro       # Página sobre mí
+│   │   ├── contacto.astro       # Página de contacto
+│   │   ├── blog/
+│   │   │   ├── index.astro      # Lista de posts (opcional)
+│   │   │   └── [...slug].astro  # Páginas dinámicas de blog
+│   │   └── rss.xml.js           # Feed RSS (opcional)
+│   ├── styles/
+│   │   └── global.css           # Estilos globales
+│   └── consts.ts                # Constantes del sitio
 ├── astro.config.mjs
-└── package.json
+├── package.json
+├── tsconfig.json
+└── LICENSE
 ```
 
 ## 🎨 Características de Diseño
@@ -128,7 +149,67 @@ npm run preview
 - CSS Grid y Flexbox para layouts eficientes
 - Animaciones con `transform` para mejor rendimiento
 
-## 🔧 Personalización
+## 📝 Funcionalidad de Blog (Opcional)
+
+Este portfolio incluye un sistema de blog completo basado en el template oficial de Astro:
+
+### Activar el Blog
+1. Descomenta las rutas de blog en `src/pages/blog/`
+2. Agrega posts en `src/content/blog/` usando Markdown
+3. Actualiza la navegación en `Header.astro`
+
+### Crear un Post
+```markdown
+---
+title: 'Mi primer post técnico'
+description: 'Describiendo mi experiencia con...'
+pubDate: 'Jul 08 2022'
+heroImage: '/blog-placeholder-3.jpg'
+---
+
+Contenido del post en Markdown...
+```
+
+### Features del Blog
+- ✅ Collection API de Astro para contenido
+- ✅ Feed RSS automático
+- ✅ Páginas dinámicas con `[...slug].astro`
+- ✅ SEO optimizado para cada post
+- ✅ Fechas formateadas automáticamente
+
+## 📑 Secciones del Portfolio
+
+El portfolio incluye las siguientes páginas principales:
+
+### 🏠 **Página Principal** (`index.astro`)
+- Hero section con información personal
+- Stack tecnológico con badges interactivos
+- Enlaces de contacto y descarga de CV
+- Llamadas a la acción
+
+### 💼 **Experiencia** (`experiencia.astro`)
+- Historial laboral detallado
+- Proyectos realizados por empresa
+- Tecnologías utilizadas en cada posición
+- Logros y responsabilidades
+
+### 🚀 **Proyectos** (`proyectos.astro`)
+- Portfolio de proyectos técnicos
+- Screenshots y demostraciones
+- Tecnologías utilizadas
+- Enlaces a código fuente y demos
+
+### 👨‍💻 **Sobre Mí** (`sobre-mi.astro`)
+- Historia personal y profesional
+- Habilidades y competencias
+- Intereses y motivaciones
+- Filosofía de desarrollo
+
+### 📞 **Contacto** (`contacto.astro`)
+- Formulario de contacto
+- Información de contacto directa
+- Enlaces a redes sociales
+- Disponibilidad y ubicación
 
 ### Cambiar Información Personal
 
@@ -137,11 +218,15 @@ Edita el archivo `src/consts.ts`:
 ```typescript
 export const SITE_TITLE = 'Tu Nombre';
 export const SITE_DESCRIPTION = 'Tu descripción profesional';
+export const TWITTER_HANDLE = '@tutwitter';
+export const MY_NAME = 'Tu Nombre';
 ```
 
 ### Modificar Estilos
 
-Los estilos principales están en cada componente `.astro`. Las variables CSS globales se encuentran en:
+Los estilos principales están en:
+- `src/styles/global.css` - Estilos globales
+- Cada componente `.astro` - Estilos específicos
 
 ```css
 :root {
@@ -154,8 +239,9 @@ Los estilos principales están en cada componente `.astro`. Las variables CSS gl
 ### Agregar Nuevas Páginas
 
 1. Crea un nuevo archivo en `src/pages/`
-2. Sigue la estructura de `index.astro`
+2. Sigue la estructura de las páginas existentes (`experiencia.astro`, `proyectos.astro`, etc.)
 3. Actualiza la navegación en `Header.astro`
+4. Agrega el enlace correspondiente en el menú principal
 
 ## 📊 Optimizaciones SEO
 
@@ -163,9 +249,10 @@ Los estilos principales están en cada componente `.astro`. Las variables CSS gl
 - ✅ Títulos de página descriptivos
 - ✅ Alt text en todas las imágenes
 - ✅ Estructura semántica HTML5
-- ✅ Schema markup (JSON-LD)
-- ✅ Sitemap automático
+- ✅ Schema markup personalizado
 - ✅ Open Graph tags
+- ✅ Feed RSS para blog
+- ✅ Sitemap automático
 
 ## 🌐 Deployment
 
@@ -188,7 +275,18 @@ vercel --prod
 
 ### GitHub Pages
 
-Configura GitHub Actions con el workflow oficial de Astro para deploy automático.
+```bash
+# Instalar adapter
+npm install @astrojs/github-pages
+
+# Configurar astro.config.mjs
+export default defineConfig({
+  output: 'static',
+  adapter: githubPages(),
+  site: 'https://Luudeus.github.io',
+  base: '/Portfolio',
+});
+```
 
 ## 📈 Performance
 
@@ -204,6 +302,48 @@ Configura GitHub Actions con el workflow oficial de Astro para deploy automátic
 - Compresión de imágenes automática (WebP/AVIF)
 - CSS crítico inline
 - Prefetch de recursos importantes
+- Collection API para mejor performance del blog
+
+## 🚀 Stack Técnico Destacado
+
+Este portfolio demuestra experiencia práctica en:
+
+### Backend & APIs
+- **Python** (Flask, Jinja2)
+- **C#** (.NET)
+- **PHP** 
+- **API REST** integrations
+- **EspoCRM** customization
+- **SQL Server** database management
+
+### Frontend & Frameworks
+- **JavaScript/TypeScript** 
+- **Astro** (este proyecto)
+- **Responsive Web Design**
+- **CSS Grid & Flexbox**
+
+### DevOps & Tools
+- **Azure DevOps** 
+- **AWS S3** 
+- **Selenium** automation
+- **Web Scraping** 
+- **OCR** processing
+
+## 🎯 Basado en Astro Blog Template
+
+Este proyecto extiende el [Blog Template oficial de Astro](https://github.com/withastro/astro/tree/main/examples/blog) con:
+
+- ✨ **Portfolio Landing Page**: Página principal personalizada
+- 🎨 **Diseño Moderno**: Gradientes y animaciones personalizadas
+- ⚡ **Optimizaciones de Performance**: Mejoras específicas para portfolio
+- 📱 **Responsive Design**: Adaptado para mostrar proyectos y habilidades
+- 🔧 **Componentes Reutilizables**: Sistema de componentes escalable
+
+### Mantener el Blog (Opcional)
+Si deseas agregar un blog técnico:
+1. Descomenta las páginas en `src/pages/blog/`
+2. Agrega contenido en `src/content/blog/`
+3. Personaliza el layout en `src/layouts/BlogPost.astro`
 
 ## 🤝 Contribuciones
 
@@ -222,10 +362,10 @@ Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
 ## 📞 Contacto
 
 **Luciano André Cabrales Lefimil**
-- 📧 Email: lacabrales@gmail.com
-- 📱 WhatsApp: +56 9 9791 3908
+- 📧 Email: [lacabrales@gmail.com](mailto:lacabrales@gmail.com)
+- 📱 WhatsApp: [+56 9 9791 3908](https://wa.me/56997913908)
 - 💼 LinkedIn: [luciano-cabrales-lefimil](https://www.linkedin.com/in/luciano-cabrales-lefimil-58736427a/)
-- 🌍 Ubicación: Santiago, Chile
+- 🌍 Ubicación: La Serena, Coquimbo Region, Chile
 
 ---
 
@@ -234,8 +374,11 @@ Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
 ## 🔄 Changelog
 
 ### v1.0.0 (2024)
-- ✨ Lanzamiento inicial del portfolio
-- 🎨 Diseño responsivo completo
-- ⚡ Optimizaciones de rendimiento
-- 📱 Soporte móvil completo
-- 🔍 SEO optimizado
+- ✨ Lanzamiento inicial del portfolio basado en Astro Blog Template
+- 🎨 Diseño responsivo completo con gradientes modernos
+- ⚡ Optimizaciones de rendimiento y Core Web Vitals
+- 📱 Soporte móvil completo con breakpoints optimizados
+- 🔍 SEO optimizado con meta tags personalizados
+- 📄 CV descargable integrado
+- 🌟 Animaciones de entrada progresivas
+- 📝 Sistema de blog opcional para contenido técnico
