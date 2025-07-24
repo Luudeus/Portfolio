@@ -1,0 +1,147 @@
+---
+title: 'De EspoCRM a OCR: Mi Evolución en Automatización de Procesos'
+description: 'Cómo mi experiencia desarrollando CRMs me llevó a especializarme en automatización con OCR y web scraping'
+pubDate: 'Jul 24 2025'
+heroImage: '../../assets/automation-ocr.jpg'
+tags: ['automatización', 'OCR', 'web-scraping', 'C#', 'desarrollo']
+---
+
+Hace dos años, cuando comencé mi carrera en **Playa EIRL**, nunca imaginé que terminaría especializándome en tecnologías OCR y automatización de procesos. Mi journey como desarrollador ha sido una evolución constante desde el desarrollo web tradicional hasta la automatización inteligente de datos.
+
+## El Punto de Partida: CRMs y Automatización Web
+
+Todo comenzó implementando sistemas **EspoCRM** para clientes. Lo que inicialmente parecía un trabajo rutinario de configuración, rápidamente se convirtió en algo más interesante cuando me di cuenta del potencial de automatización.
+
+```php
+// Mi primer script de automatización - integración CRM a WordPress
+function syncCrmToWordPress($crmData) {
+    $apiEndpoint = 'https://cliente.com/wp-json/wp/v2/posts';
+    
+    foreach($crmData as $record) {
+        $postData = [
+            'title' => $record['name'],
+            'content' => $record['description'],
+            'status' => 'publish'
+        ];
+        
+        // Reducir carga manual en un 80%
+        wp_remote_post($apiEndpoint, ['body' => $postData]);
+    }
+}
+```
+
+Esta automatización **redujo la carga manual en plataformas como opencar.cl en un 80%**. Fue entonces cuando entendí el verdadero poder de automatizar procesos repetitivos.
+
+## El Salto a OCR: Cuando los Documentos Hablan
+
+Mi transición a **I2b Tech** marcó un cambio radical. De manipular datos estructurados de CRMs, pasé a extraer información de documentos escaneados y sitios web complejos.
+
+```csharp
+// Ejemplo de extracción OCR con regex nombrados
+public class DocumentProcessor 
+{
+    private readonly Regex invoicePattern = new Regex(
+        @"(?<invoice>FACTURA\s+N°\s+(?<number>\d+))|" +
+        @"(?<date>FECHA:\s+(?<value>\d{2}/\d{2}/\d{4}))|" +
+        @"(?<total>TOTAL:\s*\$(?<amount>[\d,]+\.\d{2}))",
+        RegexOptions.IgnoreCase | RegexOptions.Multiline
+    );
+    
+    public InvoiceData ExtractInvoiceData(string ocrText)
+    {
+        var matches = invoicePattern.Matches(ocrText);
+        var invoice = new InvoiceData();
+        
+        foreach (Match match in matches)
+        {
+            if (match.Groups["invoice"].Success)
+                invoice.Number = match.Groups["number"].Value;
+            else if (match.Groups["date"].Success)
+                invoice.Date = DateTime.Parse(match.Groups["value"].Value);
+            else if (match.Groups["total"].Success)
+                invoice.Total = decimal.Parse(match.Groups["amount"].Value);
+        }
+        
+        return invoice;
+    }
+}
+```
+
+## Los Desafíos Reales del OCR
+
+Trabajar con OCR no es solo aplicar una biblioteca y esperar resultados perfectos. Los documentos reales son **caóticos**:
+
+- Escaneos de baja calidad
+- Formatos inconsistentes  
+- Texto rotado o distorsionado
+- Tablas complejas
+
+La clave está en el **manejo inteligente de errores** y la **validación de datos**:
+
+```csharp
+public class OCRValidator 
+{
+    public bool ValidateExtractedData(string rawText, ExtractedData data)
+    {
+        // Validar coherencia de datos
+        if (data.Date > DateTime.Now.AddDays(1))
+            return false; // Fecha futura improbable
+            
+        // Verificar patrones esperados
+        if (!Regex.IsMatch(data.InvoiceNumber, @"^\d{6,10}$"))
+            return false; // Formato de factura inválido
+            
+        // Cross-validation con texto original
+        return rawText.Contains(data.InvoiceNumber);
+    }
+}
+```
+
+## Metodologías Ágiles en Automatización
+
+Una de las lecciones más valiosas ha sido aplicar **Scrum** en proyectos de automatización. Las dailies con equipos internacionales me han enseñado que la automatización no es solo código, es **comunicación constante** sobre:
+
+- Casos edge no contemplados
+- Nuevos formatos de documentos
+- Optimizaciones de rendimiento
+- Feedback de usuarios finales
+
+## Lecciones Aprendidas
+
+### 1. **La Automatización es Incremental**
+No intentes automatizar todo de una vez. Comienza con el 80% de casos comunes y refina gradualmente.
+
+### 2. **Los Datos Sucios son la Norma**
+Siempre asume que los datos de entrada serán imperfectos. Diseña tu sistema para ser resiliente.
+
+### 3. **La Observabilidad es Crítica**
+En automatización, necesitas saber **cuándo** y **por qué** fallan los procesos:
+
+```csharp
+// Logging detallado para debugging
+_logger.LogInformation("Processing document {DocumentId}: " +
+    "Confidence: {Confidence}%, " +
+    "Fields extracted: {FieldCount}, " +
+    "Validation errors: {ErrorCount}",
+    documentId, confidence, fieldCount, errorCount);
+```
+
+## El Futuro: IA y Automatización Inteligente
+
+Mi próximo objetivo es integrar **modelos de IA** para mejorar la precisión del OCR. Estoy explorando:
+
+- Fine-tuning de modelos para documentos específicos
+- Validación cruzada con LLMs
+- Automatización adaptativa que aprende de errores
+
+---
+
+## Reflexión Personal
+
+Desde mis días implementando **EspoCRM** hasta automatizar extracción de datos complejos, he aprendido que la automatización exitosa requiere **empatía hacia el usuario final**. No se trata solo de escribir código eficiente, sino de resolver problemas reales de manera elegante.
+
+¿Qué proyectos de automatización te han marcado más? ¿Has trabajado con OCR o web scraping? Me encantaría conocer tus experiencias en los comentarios.
+
+---
+
+*¿Te interesa la automatización de procesos? Conectemos en [LinkedIn](https://linkedin.com/in/luciano-cabrales-lemil-58736427a/) para intercambiar ideas sobre desarrollo y automatización.*

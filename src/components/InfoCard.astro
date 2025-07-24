@@ -1,0 +1,28 @@
+---
+// Componente Card flexible con slot y clase opcional
+export interface Props {
+  class?: string;
+}
+
+const { class: customClass } = Astro.props;
+---
+<div class={`contact-card ${customClass ?? ''}`}>
+  <slot />
+</div>
+
+<style>
+  .contact-card {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(29, 78, 216, 0.05));
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+    color: inherit;
+  }
+
+</style>

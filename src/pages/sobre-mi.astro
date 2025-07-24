@@ -1,0 +1,1115 @@
+---
+// Página Sobre Mí
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Image } from 'astro:assets';
+import ProfilePhoto from '../assets/round_pfp.png';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Conoce más sobre Luciano André Cabrales Lefimil - Mi trayectoria profesional, experiencia en desarrollo de software, automatización y pasión por crear soluciones tecnológicas innovadoras."/>
+		<meta name="viewport" content="width=device-width" />
+        <BaseHead title={`Sobre Mí - ${SITE_TITLE}`} description="Conoce mi trayectoria profesional y experiencia en desarrollo de software" />
+	</head>
+	<body>
+		<Header />
+		
+		<!-- Hero Section -->
+		<div class="hero-section">
+			<div class="hero-container">
+				<div class="hero-content">
+					<div class="hero-badge">
+						<span class="badge-icon">💻</span>
+						<span>Desarrollador Full Stack</span>
+					</div>
+					<h1>Sobre Mí</h1>
+					<p class="hero-subtitle">Mi pasión por la tecnología y el desarrollo de software</p>
+					<div class="hero-stats">
+						<div class="stat-box">
+							<span class="stat-number">2+</span>
+							<span class="stat-label">Años de experiencia</span>
+						</div>
+						<div class="stat-box">
+							<span class="stat-number">30%</span>
+							<span class="stat-label">Mejora en entregas</span>
+						</div>
+						<div class="stat-box">
+							<span class="stat-number">50%</span>
+							<span class="stat-label">Optimización web</span>
+						</div>
+					</div>
+				</div>
+				<!-- Hero decoration -->
+				<div class="hero-decoration">
+					<div class="floating-card">
+						<div class="code-snippet">
+							<div class="code-header">
+								<span class="dot red"></span>
+								<span class="dot yellow"></span>
+								<span class="dot green"></span>
+							</div>
+							<div class="code-content">
+								<div class="code-line">
+									<span class="keyword">function</span> 
+									<span class="function">createSolution</span><span class="punctuation">() {</span>
+								</div>
+								<div class="code-line indent">
+									<span class="keyword">return</span> 
+									<span class="string">"innovation"</span><span class="punctuation">;</span>
+								</div>
+								<div class="code-line">
+									<span class="punctuation">}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="floating-icons">
+						<div class="tech-icon">⚡</div>
+						<div class="tech-icon">🚀</div>
+						<div class="tech-icon">💡</div>
+						<div class="tech-icon">🎯</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		<main>
+			<!-- Biografía -->
+			<section class="biography-section fade-in fade-in-delay-1">
+				<div class="section-container">
+					<h2>Mi Historia</h2>
+					<div class="bio-content">
+						<p>
+							Nacido en Puente Alto en 2003, mi vida ha estado marcada por constantes cambios que han forjado mi capacidad de adaptación y crecimiento. A los dos años, mi familia se trasladó a Chillán por motivos laborales de mi padre, donde pasé mi infancia y completé la enseñanza básica hasta 2016.
+						</p>
+						<p>
+							En 2017, un nuevo cambio nos llevó a La Serena, donde culminé mi enseñanza media y di mis primeros pasos en la educación superior en la Universidad Católica del Norte, Coquimbo. Tras cursar 4 semestres, enfrenté desafíos administrativos que me llevaron a replantear mi camino académico.
+						</p>
+						<p>
+							Determinado a seguir mi vocación por la programación, pero limitado por recursos para mudarme a otra ciudad, tomé la decisión estratégica de ingresar al Instituto Profesional AIEP, donde me titulé como <strong>Técnico en Programación y Análisis de Sistemas</strong>. Mi plan inicial era convalidar estos estudios para continuar en una nueva ciudad con mejores recursos.
+						</p>
+						<p>
+							Sin embargo, la vida tenía otros planes. En 2023 comencé a trabajar como desarrollador full stack, y desde mi egreso, la pasión por el desarrollo profesional me llevó a elegir el camino laboral sobre el académico, una decisión que no he dejado de celebrar.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Experiencia Profesional -->
+			<section class="experience-section fade-in fade-in-delay-2">
+				<div class="section-container">
+					<h2>Experiencia Profesional</h2>
+					<div class="experience-grid">
+						<div class="experience-card">
+							<div class="card-header">
+								<h3>Automation Developer</h3>
+								<span class="company">I2b Tech</span>
+								<span class="period">2025 - Actualidad</span>
+							</div>
+							<p>Automatización y optimización en procesos de extracción de datos de páginas y documentos empresariales, utilizando OCR y Web Scraping.</p>
+						</div>
+						
+						<div class="experience-card">
+							<div class="card-header">
+								<h3>Backend Developer</h3>
+								<span class="company">Playa EIRL</span>
+								<span class="period">2023 - 2025</span>
+							</div>
+							<p>Lideré el desarrollo Backend en múltiples proyectos, logrando un <strong>30% de mejora en la entrega de productos</strong> mediante optimización de procesos y arquitectura escalable.</p>
+						</div>
+						
+						<div class="experience-card">
+							<div class="card-header">
+								<h3>Desarrollador Freelance</h3>
+								<span class="company">Independiente</span>
+								<span class="period">2023 - Presente</span>
+							</div>
+							<p>Desarrollo de sitios web escalables a medida para clientes, mejorando el rendimiento web entre un <strong>25%-50%</strong> y optimizando significativamente el diseño y la experiencia de usuario.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Especialidades -->
+			<section class="specialties-section fade-in fade-in-delay-3">
+				<div class="section-container">
+					<h2>Mi Enfoque Profesional</h2>
+					<div class="specialties-grid">
+						<div class="specialty-card">
+							<div class="specialty-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+									<path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+									<path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+								</svg>
+							</div>
+							<h3>Desarrollo Full Stack</h3>
+							<p>Especializado en crear soluciones web escalables usando Python (Flask, Jinja2), PHP, JavaScript/TypeScript y Astro, con integración de servicios en la nube AWS S3.</p>
+						</div>
+						
+						<div class="specialty-card">
+							<div class="specialty-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+									<path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+									<path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.292-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.292c.415.764-.42 1.6-1.185 1.184l-.292-.159a1.873 1.873 0 0 0-2.692 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.693-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.292A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+								</svg>
+							</div>
+							<h3>Automatización & APIs</h3>
+							<p>Experto en integraciones entre EspoCRM, WordPress y plataformas externas mediante API REST, optimizando procesos empresariales y mejorando la eficiencia operacional.</p>
+						</div>
+						
+						<div class="specialty-card">
+							<div class="specialty-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+									<path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9"/>
+									<path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/>
+								</svg>
+							</div>
+							<h3>Metodologías Ágiles</h3>
+							<p>Implementación de Kanban para gestión eficiente de tickets y proyectos, asegurando entregas puntuales y alta calidad en el desarrollo de software.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Habilidades -->
+			<section class="skills-section fade-in fade-in-delay-4">
+				<div class="section-container">
+					<h2>Habilidades</h2>
+					<div class="skills-grid">
+						<div class="skill-category">
+							<h3>Lenguajes de Programación y Scripting</h3>
+							<div class="skill-tags">
+								<span class="skill-tag">JavaScript</span>
+								<span class="skill-tag">TypeScript</span>
+								<span class="skill-tag">Python</span>
+								<span class="skill-tag">C#</span>
+								<span class="skill-tag">PHP</span>
+								<span class="skill-tag">Bash</span>
+							</div>
+						</div>
+						
+						<div class="skill-category">
+							<h3>Frameworks y Librerías</h3>
+							<div class="skill-tags">
+								<span class="skill-tag">Flask</span>
+								<span class="skill-tag">Jinja2</span>
+								<span class="skill-tag">JQuery</span>
+								<span class="skill-tag">Bootstrap</span>
+								<span class="skill-tag">Astro.js</span>
+								<span class="skill-tag">Pandas</span>
+								<span class="skill-tag">NumPy</span>
+								<span class="skill-tag">BeautifulSoup</span>
+							</div>
+						</div>
+						
+						<div class="skill-category">
+							<h3>Automatización, Testing y Scraping</h3>
+							<div class="skill-tags">
+								<span class="skill-tag">Selenium</span>
+								<span class="skill-tag">Playwright</span>
+								<span class="skill-tag">Regex</span>
+								<span class="skill-tag">Postman</span>
+							</div>
+						</div>
+						
+						<div class="skill-category">
+							<h3>Bases de Datos y Almacenamiento en la Nube</h3>
+							<div class="skill-tags">
+								<span class="skill-tag">SQL Server</span>
+								<span class="skill-tag">MySQL</span>
+								<span class="skill-tag">SQLite</span>
+								<span class="skill-tag">AWS S3</span>
+							</div>
+						</div>
+						
+						<div class="skill-category">
+							<h3>Desarrollo Web</h3>
+							<div class="skill-tags">
+								<span class="skill-tag">HTML</span>
+								<span class="skill-tag">CSS</span>
+								<span class="skill-tag">JavaScript</span>
+								<span class="skill-tag">PHP</span>
+								<span class="skill-tag">WordPress</span>
+								<span class="skill-tag">XAMPP</span>
+							</div>
+						</div>
+						
+						<div class="skill-category">
+							<h3>Control de Versiones, Herramientas y Sistemas CRM</h3>
+							<div class="skill-tags">
+								<span class="skill-tag">Git</span>
+								<span class="skill-tag">Azure DevOps</span>
+								<span class="skill-tag">Bash</span>
+								<span class="skill-tag">Postman</span>
+								<span class="skill-tag">EspoCRM</span>
+							</div>
+						</div>
+						
+						<div class="skill-category">
+							<h3>Idiomas</h3>
+							<div class="skill-tags">
+								<span class="skill-tag language">🇪🇸 Español (Nativo)</span>
+								<span class="skill-tag language">🇺🇸 Inglés (Fluido)</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Intereses -->
+			<section class="interests-section fade-in fade-in-delay-5">
+				<div class="section-container">
+					<h2>Intereses</h2>
+					<div class="interests-grid">
+						<div class="interest-item">
+							<span class="interest-emoji">🚀</span>
+							<span class="interest-text">Nuevas tecnologías</span>
+						</div>
+						<div class="interest-item">
+							<span class="interest-emoji">🎮</span>
+							<span class="interest-text">Desarrollo de videojuegos</span>
+						</div>
+						<div class="interest-item">
+							<span class="interest-emoji">📚</span>
+							<span class="interest-text">Lectura técnica</span>
+						</div>
+						<div class="interest-item">
+							<span class="interest-emoji">🏀</span>
+							<span class="interest-text">Baloncesto</span>
+						</div>
+						<div class="interest-item">
+							<span class="interest-emoji">🎵</span>
+							<span class="interest-text">Música</span>
+						</div>
+						<div class="interest-item">
+							<span class="interest-emoji">🌱</span>
+							<span class="interest-text">Proyectos open source</span>
+						</div>
+					</div>
+				</div>
+			</section>
+				<div class="section-container">
+					<h2>Mi Filosofía de Desarrollo</h2>
+					<div class="philosophy-content">
+						<div class="philosophy-text">
+							<p>
+								Mi enfoque profesional se centra en la <strong>creación de soluciones escalables y reutilizables</strong>. Aunque mi especialidad principal es el desarrollo backend, mi pasión por el desarrollo full stack me impulsa a crear herramientas completas que evolucionen continuamente según las necesidades del proyecto.
+							</p>
+							<p>
+								Creo firmemente en el <strong>refinamiento continuo</strong>: cada proyecto es una oportunidad para mejorar, optimizar y aprender. Esta filosofía me ha permitido mantenerme actualizado con las últimas tecnologías y metodologías, siempre buscando la excelencia en cada línea de código.
+							</p>
+							<p>
+								Mi experiencia abarca más de <strong>2 años en Desarrollo de Software y Automatización</strong>, donde he demostrado capacidad de liderazgo, innovación técnica y entrega de resultados medibles que impactan positivamente en los objetivos empresariales.
+							</p>
+						</div>
+						<div class="philosophy-stats">
+							<div class="stat-item">
+								<span class="stat-number">30%</span>
+								<span class="stat-label">Mejora en entrega de productos</span>
+							</div>
+							<div class="stat-item">
+								<span class="stat-number">25-50%</span>
+								<span class="stat-label">Optimización de rendimiento web</span>
+							</div>
+							<div class="stat-item">
+								<span class="stat-number">2+</span>
+								<span class="stat-label">Años de experiencia profesional</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- Filosofía de Trabajo -->
+			<section class="cta-section fade-in fade-in-delay-7">
+				<div class="section-container">
+					<h2>¿Listo para Colaborar?</h2>
+					<p>Si buscas un desarrollador comprometido con la excelencia y la innovación, conectemos y exploremos cómo puedo contribuir a tu próximo proyecto.</p>
+					<a href="/contacto" class="cta-button">
+						<span>Iniciemos una Conversación</span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+						</svg>
+					</a>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		width: 95%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	/* Hero Section */
+	.hero-section {
+		background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1e40af 100%);
+		padding: 4rem 2rem;
+		margin: 0;
+		color: white;
+		overflow: hidden;
+		position: relative;
+		width: 100vw;
+		margin-left: calc(-50vw + 50%);
+		min-height: 60vh;
+		display: flex;
+		align-items: center;
+	}
+
+	.hero-section::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+		z-index: 1;
+	}
+
+	.hero-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 4rem;
+		max-width: 1200px;
+		margin: 0 auto;
+		position: relative;
+		z-index: 2;
+	}
+
+	.hero-content {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	/* Badge */
+	.hero-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
+		background: rgba(255, 255, 255, 0.15);
+		backdrop-filter: blur(10px);
+		padding: 0.75rem 1.5rem;
+		border-radius: 50px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		width: fit-content;
+		font-weight: 600;
+		font-size: 1rem;
+		animation: fadeInUp 1s ease-out;
+	}
+
+	.badge-icon {
+		font-size: 1.2rem;
+	}
+
+	.hero-content h1 {
+		font-size: 3.5rem;
+		margin: 0;
+		font-weight: 700;
+		color: white;
+		line-height: 1.1;
+		animation: fadeInUp 1s ease-out 0.2s both;
+	}
+
+	.hero-subtitle {
+		font-size: 1.3rem;
+		color: #dbeafe;
+		font-weight: 300;
+		line-height: 1.5;
+		animation: fadeInUp 1s ease-out 0.4s both;
+	}
+
+	/* Stats */
+	.hero-stats {
+		display: flex;
+		gap: 1.5rem;
+		margin-top: 1rem;
+		animation: fadeInUp 1s ease-out 0.6s both;
+	}
+
+	.stat-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(10px);
+		padding: 1rem 0.75rem;
+		border-radius: 16px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		min-width: 80px;
+		transition: all 0.3s ease;
+	}
+
+	.stat-box:hover {
+		transform: translateY(-5px);
+		background: rgba(255, 255, 255, 0.15);
+	}
+
+	.stat-box .stat-number {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: white;
+		margin-bottom: 0.25rem;
+	}
+
+	.stat-box .stat-label {
+		font-size: 0.75rem;
+		color: #dbeafe;
+		text-align: center;
+		font-weight: 500;
+	}
+
+	/* Lateral decoration */
+	.hero-decoration {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.floating-card {
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(15px);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-radius: 20px;
+		padding: 2rem;
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+		animation: float 6s ease-in-out infinite;
+	}
+
+	.code-snippet {
+		background: rgba(0, 0, 0, 0.3);
+		border-radius: 12px;
+		overflow: hidden;
+		font-family: 'Fira Code', 'Courier New', monospace;
+		font-size: 0.85rem;
+	}
+
+	.code-header {
+		background: rgba(0, 0, 0, 0.2);
+		padding: 0.75rem 1rem;
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+	}
+
+	.dot {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+	}
+
+	.dot.red { background: #ff5f57; }
+	.dot.yellow { background: #ffbd2e; }
+	.dot.green { background: #28ca42; }
+
+	.code-content {
+		padding: 1.5rem;
+		color: #e2e8f0;
+		line-height: 1.6;
+	}
+
+	.code-line {
+		margin-bottom: 0.5rem;
+	}
+
+	.code-line.indent {
+		padding-left: 1.5rem;
+	}
+
+	.keyword { color: #f472b6; }
+	.function { color: #60a5fa; }
+	.string { color: #34d399; }
+	.punctuation { color: #e2e8f0; }
+
+	/* Floating icons */
+	.floating-icons {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+
+	.tech-icon {
+		position: absolute;
+		font-size: 1.5rem;
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(10px);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-radius: 50%;
+		width: 45px;
+		height: 45px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		animation: floatIcon 8s ease-in-out infinite;
+	}
+
+	.tech-icon:nth-child(1) {
+		top: 10%;
+		left: 10%;
+		animation-delay: 0s;
+	}
+
+	.tech-icon:nth-child(2) {
+		top: 20%;
+		right: 15%;
+		animation-delay: 2s;
+	}
+
+	.tech-icon:nth-child(3) {
+		bottom: 30%;
+		left: 20%;
+		animation-delay: 4s;
+	}
+
+	.tech-icon:nth-child(4) {
+		bottom: 15%;
+		right: 10%;
+		animation-delay: 6s;
+	}
+
+	/* Sections */
+	.section-container {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+
+	section {
+		margin-bottom: 4rem;
+	}
+
+	section h2 {
+		font-size: 2.5rem;
+		color: #1d4ed8;
+		margin-bottom: 2rem;
+		font-weight: 700;
+		text-align: center;
+	}
+
+	/* Biography Section */
+	.biography-section {
+		background: rgba(59, 130, 246, 0.02);
+		padding: 3rem 0;
+		border-radius: 20px;
+	}
+
+	.bio-content p {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		color: #475569;
+		margin-bottom: 1.5rem;
+		text-align: justify;
+	}
+
+	.bio-content strong {
+		color: #1d4ed8;
+		font-weight: 600;
+	}
+
+	/* Experience Section */
+	.experience-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.experience-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 16px;
+		box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
+		border: 1px solid rgba(59, 130, 246, 0.1);
+		transition: all 0.3s ease;
+	}
+
+	.experience-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+	}
+
+	.card-header {
+		margin-bottom: 1rem;
+	}
+
+	.card-header h3 {
+		font-size: 1.3rem;
+		color: #1d4ed8;
+		margin-bottom: 0.5rem;
+		font-weight: 700;
+	}
+
+	.company {
+		display: block;
+		font-size: 1rem;
+		color: #64748b;
+		font-weight: 500;
+		margin-bottom: 0.25rem;
+	}
+
+	.period {
+		display: inline-block;
+		background: rgba(59, 130, 246, 0.1);
+		color: #1d4ed8;
+		padding: 0.25rem 0.75rem;
+		border-radius: 20px;
+		font-size: 0.85rem;
+		font-weight: 500;
+	}
+
+	.experience-card p {
+		color: #475569;
+		line-height: 1.6;
+		font-size: 1rem;
+	}
+
+	.experience-card strong {
+		color: #1d4ed8;
+	}
+
+	/* Specialties Section */
+	.specialties-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.specialty-card {
+		background: white;
+		padding: 2.5rem;
+		border-radius: 16px;
+		box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
+		border: 1px solid rgba(59, 130, 246, 0.1);
+		text-align: center;
+		transition: all 0.3s ease;
+	}
+
+	.specialty-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+	}
+
+	.specialty-icon {
+		width: 80px;
+		height: 80px;
+		background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 1.5rem;
+		color: white;
+	}
+
+	.specialty-card h3 {
+		font-size: 1.4rem;
+		color: #1d4ed8;
+		margin-bottom: 1rem;
+		font-weight: 700;
+	}
+
+	.specialty-card p {
+		color: #475569;
+		line-height: 1.6;
+		font-size: 1rem;
+	}
+
+	/* Philosophy Section */
+	.philosophy-section {
+		background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(29, 78, 216, 0.05));
+		padding: 3rem 0;
+		border-radius: 20px;
+		border: 1px solid rgba(59, 130, 246, 0.1);
+	}
+
+	.philosophy-content {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.philosophy-text p {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		color: #475569;
+		margin-bottom: 1.5rem;
+		text-align: justify;
+	}
+
+	.philosophy-text strong {
+		color: #1d4ed8;
+		font-weight: 600;
+	}
+
+	.philosophy-stats {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.stat-item {
+		text-align: center;
+		padding: 1.5rem;
+		background: white;
+		border-radius: 12px;
+		box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+	}
+
+	.stat-number {
+		display: block;
+		font-size: 2rem;
+		font-weight: 700;
+		color: #1d4ed8;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-label {
+		font-size: 0.9rem;
+		color: #64748b;
+		font-weight: 500;
+	}
+
+	/* Skills Section */
+	.skills-section {
+		background: white;
+		padding: 3rem 0;
+		border-radius: 20px;
+		box-shadow: 0 4px 20px rgba(59, 130, 246, 0.08);
+		border: 1px solid rgba(59, 130, 246, 0.1);
+	}
+
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.skill-category {
+		background: rgba(59, 130, 246, 0.02);
+		padding: 2rem;
+		border-radius: 16px;
+		border: 1px solid rgba(59, 130, 246, 0.1);
+		transition: all 0.3s ease;
+	}
+
+	.skill-category:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 8px 25px rgba(59, 130, 246, 0.1);
+	}
+
+	.skill-category h3 {
+		font-size: 1.2rem;
+		color: #1d4ed8;
+		margin-bottom: 1rem;
+		font-weight: 700;
+		text-align: left;
+	}
+
+	.skill-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+
+	.skill-tag {
+		background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+		color: white;
+		padding: 0.5rem 1rem;
+		border-radius: 25px;
+		font-size: 0.9rem;
+		font-weight: 500;
+		transition: all 0.3s ease;
+		box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+	}
+
+	.skill-tag:hover {
+		transform: translateY(-2px) scale(1.05);
+		box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+	}
+
+	.skill-tag.language {
+		background: linear-gradient(135deg, #10b981, #059669);
+		font-size: 1rem;
+	}
+
+	/* Interests Section */
+	.interests-section {
+		background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(29, 78, 216, 0.05));
+		padding: 3rem 0;
+		border-radius: 20px;
+		border: 1px solid rgba(59, 130, 246, 0.1);
+	}
+
+	.interests-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1.5rem;
+		margin-top: 2rem;
+	}
+
+	.interest-item {
+		background: white;
+		padding: 2rem 1.5rem;
+		border-radius: 16px;
+		text-align: center;
+		box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+		border: 1px solid rgba(59, 130, 246, 0.1);
+		transition: all 0.3s ease;
+		cursor: default;
+	}
+
+	.interest-item:hover {
+		transform: translateY(-5px) scale(1.02);
+		box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+	}
+
+	.interest-emoji {
+		font-size: 2.5rem;
+		display: block;
+		margin-bottom: 1rem;
+		filter: grayscale(0);
+		transition: all 0.3s ease;
+	}
+
+	.interest-item:hover .interest-emoji {
+		transform: scale(1.2);
+		filter: brightness(1.1);
+	}
+
+	.interest-text {
+		font-size: 1.1rem;
+		color: #1d4ed8;
+		font-weight: 600;
+	}
+
+	.cta-section {
+		background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+		padding: 4rem 2rem;
+		border-radius: 20px;
+		text-align: center;
+		color: white;
+		position: relative;
+		overflow: hidden;
+		margin: 2rem 0;
+	}
+
+	.cta-section::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+		z-index: 1;
+	}
+
+	.cta-section .section-container {
+		position: relative;
+		z-index: 2;
+	}
+
+	.cta-section h2 {
+		color: white;
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.cta-section p {
+		font-size: 1.2rem;
+		color: #dbeafe;
+		margin-bottom: 2rem;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.cta-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
+		background: white;
+		color: #1d4ed8;
+		padding: 1rem 2rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 1.1rem;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+	}
+
+	.cta-button:hover {
+		transform: translateY(-3px) scale(1.05);
+		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+		text-decoration: none;
+		color: #1e40af;
+	}
+
+	/* Animations */
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes float {
+		0%, 100% {
+			transform: translateY(0px) rotate(0deg);
+		}
+		50% {
+			transform: translateY(-20px) rotate(2deg);
+		}
+	}
+
+	@keyframes floatIcon {
+		0%, 100% {
+			transform: translateY(0px);
+		}
+		50% {
+			transform: translateY(-15px);
+		}
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.fade-in {
+		opacity: 0;
+		animation: fadeIn 0.8s ease-out forwards;
+	}
+
+	.fade-in-delay-1 { animation-delay: 0.1s; }
+	.fade-in-delay-2 { animation-delay: 0.2s; }
+	.fade-in-delay-3 { animation-delay: 0.3s; }
+	.fade-in-delay-4 { animation-delay: 0.4s; }
+	.fade-in-delay-5 { animation-delay: 0.5s; }
+	.fade-in-delay-6 { animation-delay: 0.6s; }
+	.fade-in-delay-7 { animation-delay: 0.7s; }
+
+	/* Responsive Design */
+	@media (max-width: 960px) {
+		.hero-container {
+			grid-template-columns: 1fr !important;
+			gap: 3rem;
+			text-align: center;
+		}
+		
+		.hero-decoration {
+			order: -1;
+		}
+		
+		.hero-content h1 {
+			font-size: 2.5rem;
+		}
+
+		.hero-stats {
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		
+		.floating-card {
+			transform: scale(0.8);
+		}
+
+		.philosophy-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.philosophy-stats {
+			flex-direction: row;
+			justify-content: space-around;
+		}
+
+		section h2 {
+			font-size: 2rem;
+		}
+
+		.skills-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.interests-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 640px) {
+		.hero-section {
+			padding: 2rem 1rem;
+		}
+
+		.hero-content h1 {
+			font-size: 2rem;
+		}
+
+		.hero-subtitle {
+			font-size: 1.1rem;
+		}
+
+		.hero-stats {
+			gap: 1rem;
+		}
+		
+		.stat-box {
+			min-width: 70px;
+			padding: 0.75rem 0.5rem;
+		}
+		
+		.stat-box .stat-number {
+			font-size: 1.25rem;
+		}
+		
+		.floating-card {
+			transform: scale(0.7);
+		}
+		
+		.tech-icon {
+			width: 40px;
+			height: 40px;
+			font-size: 1.25rem;
+		}
+
+		.interests-grid {
+			grid-template-columns: 1fr;
+		}
+
+		main .cta-section h2 {
+			font-size: 2rem;
+		}
+
+		main .cta-section p {
+			font-size: 1.1rem;
+		}
+	}
+</style>

@@ -1,0 +1,440 @@
+---
+// Índice principal, página de caída
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Image } from 'astro:assets';
+import ProfilePhoto from '../assets/round_pfp.png';
+import CV from '../assets/Luciano_Cabrales_CV.pdf';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Luciano André Cabrales Lefimil - Desarrollador Full Stack: 
+		Técnico en Programación y Análisis de Sistemas especializado en desarrollo web, integración de APIs, 
+        automatización y soluciones tecnológicas personalizadas desde Santiago, Chile."/>
+		<meta name="viewport" content="width=device-width" />
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<div class="hero-section">
+			<div class="profile-container">
+				<div class="profile-image">
+					<Image 
+						src={ProfilePhoto} 
+						alt="Luciano Cabrales - Desarrollador Full Stack"
+						loading="eager"
+						priority={true}
+					/>
+				</div>
+				<div class="profile-content">
+					<h1><span class="name-white">Luciano André Cabrales Lefimil</span></h1>
+					<h2 class="role">Desarrollador Web | Automatización Backend</h2>
+					<p class="description">Desarrollador web con experiencia en automatización y soporte técnico, especializado en integraciones entre EspoCRM, WordPress y plataformas externas mediante API REST. Desarrollo sitios web escalables a medida usando Python (Flask, Jinja2), PHP, JavaScript/TypeScript y Astro, con servicios en la nube AWS S3.</p>
+					<div class="tech-stack">
+<span class="tech-badge">C#</span>
+<span class="tech-badge">Python</span>
+<span class="tech-badge">JavaScript</span>
+						<span class="tech-badge">TypeScript</span>
+						<span class="tech-badge">PHP</span>
+						<span class="tech-badge">OCR</span>
+						<span class="tech-badge">Selenium</span>
+						<span class="tech-badge">Web Scraping</span>
+						<span class="tech-badge">Azure DevOps</span>
+						<span class="tech-badge">SQL Server</span>
+						<span class="tech-badge">API REST</span>
+						<span class="tech-badge">EspoCRM</span>
+						<span class="tech-badge">AWS S3</span>
+						<span class="tech-badge">Flask</span>
+						<span class="tech-badge">Astro</span>
+					</div>
+<div class="action-buttons">
+	<a href={CV} download="Luciano_Cabrales_CV.pdf" class="action-button white-button">
+		<div class="button-icon">
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+				<path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+				<path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+			</svg>
+		</div>
+		Descargar CV
+	</a>
+	
+	<a href="mailto:lacabrales@gmail.com" class="action-button white-button">
+		<div class="button-icon">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="52 42 88 66" aria-hidden="true">
+			<path fill="#4285f4" d="M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6"/>
+			<path fill="#34a853" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 15"/>
+			<path fill="#fbbc04" d="M120 48v26l20-15v-8c0-7.42-8.47-11.65-14.4-7.2"/>
+			<path fill="#ea4335" d="M72 74V48l24 18 24-18v26L96 92"/>
+			<path fill="#c5221f" d="M52 51v8l20 15V48l-5.6-4.2c-5.94-4.45-14.4-.22-14.4 7.2"/>
+		</svg>
+		</div>
+		Email
+	</a>
+
+	<a href="https://wa.me/56997913908" target="_blank" rel="noopener" class="action-button white-button">
+		<div class="button-icon">
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+				<path fill="#25d366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.051 3.488"/>
+			</svg>
+		</div>
+		WhatsApp
+	</a>
+
+	<a href="https://www.linkedin.com/in/luciano-cabrales-lefimil-58736427a/" target="_blank" rel="noopener" class="action-button white-button">
+		<div class="button-icon">
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+				<path fill="#0077b5" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+			</svg>
+		</div>
+		LinkedIn
+	</a>
+</div>
+				</div>
+			</div>
+		</div>
+		<main>
+			<div class="intro-section fade-in fade-in-delay-1">
+				<h3>¿Buscas soluciones web innovadoras y automatización inteligente?</h3>
+				<p class="intro-text">Descubre mi experiencia creando aplicaciones escalables, integraciones robustas y herramientas que optimizan procesos empresariales.</p>
+			</div>
+
+			<div class="cta-section fade-in fade-in-delay-2">
+				<p class="cta-text">¿Tienes un proyecto en mente? Conectemos y hagámoslo realidad</p>
+				<p class="instructions">Explora más sobre mi trabajo y experiencia en mi página de <a href="/contacto"><code>Contacto</code></a></p>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+<style>
+
+	main {
+		width: 95%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.hero-section {
+		background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1e40af 100%);
+		padding: 4rem 2rem;
+		margin: 0 0 3rem 0;
+		color: white;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.hero-section::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+		z-index: 1;
+	}
+
+	.profile-container {
+		display: flex;
+		align-items: center;
+		gap: 3rem;
+		max-width: 1200px;
+		margin: 0 auto;
+		position: relative;
+		z-index: 2;
+	}
+
+	.profile-image {
+		flex-shrink: 0;
+	}
+
+	.profile-image :global(img) {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		object-fit: cover;
+		border: 4px solid rgba(96, 165, 250, 0.3);
+		box-shadow: 0 20px 40px rgba(29, 78, 216, 0.3);
+	}
+
+	.profile-content h1 {
+		font-size: 3rem;
+		margin-bottom: 0.5rem;
+		font-weight: 700;
+	}
+
+	.role {
+		font-size: 1.5rem;
+		color: #dbeafe;
+		margin-bottom: 1rem;
+		font-weight: 300;
+	}
+
+	.description {
+		font-size: 1.1rem;
+		color: #bfdbfe;
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
+
+	.tech-stack {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.tech-badge {
+		background: rgba(96, 165, 250, 0.15);
+		backdrop-filter: blur(10px);
+		border: 1px solid rgba(96, 165, 250, 0.3);
+		padding: 0.5rem 1rem;
+		border-radius: 20px;
+		font-size: 0.9rem;
+		font-weight: 500;
+		transition: all 0.3s ease;
+		color: #dbeafe;
+	}
+
+	.tech-badge:hover {
+		background: rgba(96, 165, 250, 0.25);
+		border-color: rgba(96, 165, 250, 0.5);
+		transform: translateY(-2px);
+		color: white;
+	}
+
+	.action-buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-top: 1.5rem;
+	}
+
+	.action-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.75rem 1.25rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 0.95rem;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+		cursor: pointer;
+		border: 2px solid transparent;
+	}
+
+	.action-button:hover {
+		transform: translateY(-3px) scale(1.05);
+		text-decoration: none;
+	}
+
+	.button-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 20px;
+		height: 20px;
+	}
+
+	.button-icon svg {
+		width: 18px;
+		height: 18px;
+	}
+
+	.white-button {
+		background: white;
+		color: #1d4ed8;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	}
+
+	.white-button:hover {
+		background: #f8fafc;
+		color: #1e40af;
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+	}
+
+	.name-white {
+		color: white;
+		font-weight: 700;
+	}
+
+	.intro-section {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.intro-section h3 {
+		font-size: 2rem;
+		color: #1d4ed8;
+		margin-bottom: 1rem;
+		font-weight: 600;
+	}
+
+	.intro-text {
+		font-size: 1.1rem;
+		color: #64748b;
+		max-width: 600px;
+		margin: 0 auto;
+		line-height: 1.6;
+	}
+
+	.cta-section {
+		text-align: center;
+		padding: 2rem;
+		background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(29, 78, 216, 0.05));
+		border-radius: 16px;
+		border: 1px solid rgba(59, 130, 246, 0.15);
+	}
+
+	.cta-text {
+		font-size: 1.2rem;
+		color: #1e40af;
+		margin-bottom: 1rem;
+		font-weight: 500;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(59, 130, 246, 0.15);
+		color: #1d4ed8;
+		border-radius: 6px;
+		padding: 0.3em 0.6em;
+		border: 1px solid rgba(59, 130, 246, 0.2);
+	}
+	.instructions strong {
+		color: #1d4ed8;
+	}
+
+	@media (max-width: 768px) {
+		.intro-section h3 {
+			font-size: 1.6rem;
+		}
+		
+		.cta-text {
+			font-size: 1.1rem;
+		}
+
+		.action-buttons {
+			justify-content: center;
+		}
+
+		.action-button {
+			font-size: 0.9rem;
+			padding: 0.65rem 1rem;
+		}
+	}
+
+	:root {
+		--accent-light-dev: 59, 130, 246;
+		--accent-dark-dev: 29, 78, 216;
+
+		--accent-gradient-dev-title: linear-gradient(
+			45deg,
+			#60a5fa,
+			#1d4ed8 30%,
+			#dbeafe 60%
+		);
+
+		--accent-gradient-dev: linear-gradient(
+			45deg,
+			white,
+			#3b82f6 30%, 
+			#1d4ed8 60%,
+			white
+		);
+
+		--accent-gradient-dark-dev: linear-gradient(
+			45deg,
+			#1e3a8a,
+			#3b82f6 30%, 
+			#1d4ed8 60%
+		);
+	}
+
+	@media (max-width: 960px) {
+		.hero-section {
+			padding: 2rem 1rem;
+		}
+
+		.profile-container {
+			flex-direction: column;
+			text-align: center;
+			gap: 2rem;
+		}
+
+		.profile-image :global(img) {
+			width: 150px;
+			height: 150px;
+		}
+
+		.profile-content h1 {
+			font-size: 2rem;
+		}
+
+		.role {
+			font-size: 1.2rem;
+		}
+
+		.description {
+			font-size: 1rem;
+		}
+
+		.tech-stack {
+			justify-content: center;
+		}
+
+		h3 {
+			font-size: 20px;
+		}
+
+		.action-buttons {
+			justify-content: center;
+		}
+
+		.action-button {
+			font-size: 0.85rem;
+			padding: 0.6rem 1rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.action-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.action-button {
+			min-width: 200px;
+			justify-content: center;
+		}
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(15px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.fade-in {
+		opacity: 0;
+		animation: fadeIn 0.6s ease-out forwards;
+	}
+
+	.fade-in-delay-1  { animation-delay: 0.1s; }
+	.fade-in-delay-2  { animation-delay: 0.2s; }
+	.fade-in-delay-3  { animation-delay: 0.3s; }
+	.fade-in-delay-4  { animation-delay: 0.4s; }
+	.fade-in-delay-5  { animation-delay: 0.5s; }
+</style>

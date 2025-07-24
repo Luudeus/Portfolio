@@ -1,0 +1,656 @@
+---
+// Página de proyectos
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Proyectos de desarrollo web, automatización y aplicaciones realizados por Luciano Cabrales - Desarrollador Full Stack especializado en Python, JavaScript, PHP y integración de APIs."/>
+		<meta name="viewport" content="width=device-width" />
+        <BaseHead title={`Proyectos - ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		
+		<div class="hero-section">
+			<div class="hero-content">
+				<h1><span class="title-gradient">Mis Proyectos</span></h1>
+				<p class="hero-description">Explora una selección de proyectos que demuestran mi experiencia en desarrollo web, automatización y soluciones tecnológicas personalizadas.</p>
+			</div>
+		</div>
+
+		<main>
+			<!-- Proyectos Profesionales -->
+			<section class="projects-section fade-in fade-in-delay-1">
+				<h2 class="section-title">Proyectos Profesionales</h2>
+				
+				<div class="project-card featured">
+					<div class="project-header">
+						<h3>Sistema de Automatización OCR & Web Scraping</h3>
+						<span class="project-status current">En Desarrollo</span>
+					</div>
+					<div class="project-content">
+						<p class="project-description">
+							Desarrollo de sistema completo de automatización para extracción de datos desde sitios web y documentos escaneados. 
+							Implementación de scripts robustos en C# con procesamiento OCR, mejorando la eficiencia de extracción en un 50%.
+						</p>
+						<div class="tech-stack">
+							<span class="tech-badge">C#</span>
+							<span class="tech-badge">Selenium</span>
+							<span class="tech-badge">OCR</span>
+							<span class="tech-badge">Regex</span>
+							<span class="tech-badge">SQL Server</span>
+							<span class="tech-badge">Azure DevOps</span>
+						</div>
+						<div class="project-achievements">
+							<div class="achievement">
+								<span class="metric">50%</span>
+								<span class="label">Mejora en eficiencia</span>
+							</div>
+							<div class="achievement">
+								<span class="metric">100%</span>
+								<span class="label">Reducción de fallos</span>
+							</div>
+						</div>
+					</div>
+					<div class="project-company">
+						<span>I2b Tech • Ago 2025 - Actualidad</span>
+					</div>
+				</div>
+
+				<div class="project-card">
+					<div class="project-header">
+						<h3>Plataforma CRM Integrada</h3>
+						<span class="project-status completed">Completado</span>
+					</div>
+					<div class="project-content">
+						<p class="project-description">
+							Implementación y desarrollo de múltiples sistemas CRM utilizando EspoCRM con integraciones personalizadas a WordPress 
+							y plataformas externas vía API REST. Reducción del 80% en carga manual para opencar.cl.
+						</p>
+						<div class="tech-stack">
+							<span class="tech-badge">EspoCRM</span>
+							<span class="tech-badge">PHP</span>
+							<span class="tech-badge">API REST</span>
+							<span class="tech-badge">WordPress</span>
+							<span class="tech-badge">Python</span>
+							<span class="tech-badge">AWS S3</span>
+						</div>
+						<div class="project-achievements">
+							<div class="achievement">
+								<span class="metric">80%</span>
+								<span class="label">Reducción carga manual</span>
+							</div>
+							<div class="achievement">
+								<span class="metric">50%</span>
+								<span class="label">Mejora eficiencia</span>
+							</div>
+						</div>
+					</div>
+					<div class="project-company">
+						<span>Playa E.I.R.L. • May 2023 - May 2025</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- Proyectos Personales -->
+			<section class="projects-section fade-in fade-in-delay-2">
+				<h2 class="section-title">Proyectos Personales</h2>
+				
+				<div class="projects-grid">
+					<div class="project-card">
+						<div class="project-header">
+							<h3>Futuralib</h3>
+							<span class="project-type">Gestión de Bibliotecas</span>
+						</div>
+						<div class="project-content">
+							<p class="project-description">
+								Sistema completo de gestión bibliotecaria con interfaz moderna y funcionalidades avanzadas de búsqueda, 
+								préstamos y administración de usuarios.
+							</p>
+							<div class="tech-stack">
+								<span class="tech-badge">Python</span>
+								<span class="tech-badge">Flask</span>
+								<span class="tech-badge">Jinja2</span>
+								<span class="tech-badge">jQuery</span>
+								<span class="tech-badge">SQLite</span>
+							</div>
+						</div>
+						<div class="project-year">2023</div>
+					</div>
+
+					<div class="project-card">
+						<div class="project-header">
+							<h3>InvenTech</h3>
+							<span class="project-type">Gestión de Inventario</span>
+						</div>
+						<div class="project-content">
+							<p class="project-description">
+								Aplicación web escalable para control de inventario empresarial con seguimiento en tiempo real, 
+								reportes automatizados y alertas de stock.
+							</p>
+							<div class="tech-stack">
+								<span class="tech-badge">Python</span>
+								<span class="tech-badge">Flask</span>
+								<span class="tech-badge">Jinja2</span>
+								<span class="tech-badge">jQuery</span>
+								<span class="tech-badge">Bootstrap</span>
+							</div>
+						</div>
+						<div class="project-year">2023</div>
+					</div>
+
+					<div class="project-card">
+						<div class="project-header">
+							<h3>EduControl</h3>
+							<span class="project-type">Asistencia Escolar</span>
+						</div>
+						<div class="project-content">
+							<p class="project-description">
+								Sistema de control de asistencia escolar con panel administrativo, generación de reportes 
+								y notificaciones automáticas para apoderados.
+							</p>
+							<div class="tech-stack">
+								<span class="tech-badge">Python</span>
+								<span class="tech-badge">Flask</span>
+								<span class="tech-badge">Jinja2</span>
+								<span class="tech-badge">jQuery</span>
+								<span class="tech-badge">MySQL</span>
+							</div>
+						</div>
+						<div class="project-year">2023</div>
+					</div>
+
+					<div class="project-card">
+						<div class="project-header">
+							<h3>Areté Centro de Salud Mental</h3>
+							<span class="project-type">Sitio Web Informativo</span>
+						</div>
+						<div class="project-content">
+							<p class="project-description">
+								Sitio web moderno y responsive para centro de salud mental con información de servicios, 
+								equipo profesional y sistema de contacto.
+							</p>
+							<div class="tech-stack">
+								<span class="tech-badge">Astro</span>
+								<span class="tech-badge">TypeScript</span>
+								<span class="tech-badge">Bootstrap</span>
+								<span class="tech-badge">CSS3</span>
+							</div>
+						</div>
+						<div class="project-year">2025</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Proyectos Académicos -->
+			<section class="projects-section fade-in fade-in-delay-3">
+				<h2 class="section-title">Proyectos Académicos</h2>
+				
+				<div class="project-card highlighted">
+					<div class="project-header">
+						<h3>AIEP Nuevo Impulso Tecnológico NIT 3.0</h3>
+						<span class="project-status academic">Proyecto Académico</span>
+					</div>
+					<div class="project-content">
+						<p class="project-description">
+							Aplicación web de gestión de usuarios para junta de vecinos desarrollada en colaboración con AIEP y Carabineros de Chile. 
+							Proyecto destacado por implementación de metodologías ágiles y arquitectura escalable.
+						</p>
+						<div class="tech-stack">
+							<span class="tech-badge">PHP</span>
+							<span class="tech-badge">JavaScript</span>
+							<span class="tech-badge">Docker</span>
+							<span class="tech-badge">CloudFlare</span>
+							<span class="tech-badge">Scrum</span>
+						</div>
+						<div class="project-recognition">
+							<span class="award-icon">🏆</span>
+							<span>Principal contribuyente • Titulado por máxima distinción</span>
+						</div>
+					</div>
+					<div class="project-company">
+						<span>Instituto Profesional AIEP • 2023</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- Experiencia como Juez -->
+			<section class="projects-section fade-in fade-in-delay-4">
+				<h2 class="section-title">Reconocimientos y Participación</h2>
+				
+				<div class="project-card recognition">
+					<div class="project-header">
+						<h3>Juez - World Robot Olympiad (WRO) Chile</h3>
+						<span class="project-type">Futuros Innovadores</span>
+					</div>
+					<div class="project-content">
+						<p class="project-description">
+							Juez oficial en la categoría de Futuros Innovadores de la World Robot Olympiad Chile 2024, 
+							evaluando proyectos robóticos de innovación tecnológica en la semifinal nacional previa a Turquía.
+						</p>
+						<div class="criteria-evaluated">
+							<div class="criteria">Criterios de Evaluación:</div>
+							<ul>
+								<li>Diseño e innovación tecnológica</li>
+								<li>Calidad de programación</li>
+								<li>Presentación y comunicación</li>
+								<li>Aplicación práctica de la solución</li>
+							</ul>
+						</div>
+					</div>
+					<div class="project-company">
+						<span>World Robot Olympiad Chile • 2024</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- Call to Action -->
+			<div class="cta-section fade-in fade-in-delay-5">
+				<h3>¿Interesado en colaborar?</h3>
+				<p class="cta-text">Si tienes un proyecto en mente o quieres discutir una oportunidad de colaboración, no dudes en contactarme.</p>
+				<div class="cta-buttons">
+					<a href="/contacto" class="cta-button primary">Conversemos</a>
+					<a href="mailto:lacabrales@gmail.com" class="cta-button secondary">Enviar Email</a>
+				</div>
+			</div>
+		</main>
+		
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		width: 95%;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding-bottom: 2rem;
+	}
+
+	.hero-section {
+		background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1e40af 100%);
+		padding: 4rem 2rem;
+		margin: 0 0 3rem 0;
+		color: white;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.hero-section::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+		z-index: 1;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 2;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.title-gradient {
+		background: linear-gradient(45deg, #ffffff, #dbeafe);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-size: 3.5rem;
+		font-weight: 700;
+		display: block;
+		margin-bottom: 1rem;
+	}
+
+	.hero-description {
+		font-size: 1.2rem;
+		color: #dbeafe;
+		line-height: 1.6;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.projects-section {
+		margin-bottom: 4rem;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		color: #1d4ed8;
+		margin-bottom: 2rem;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	.project-card {
+		background: white;
+		border-radius: 16px;
+		padding: 2rem;
+		margin-bottom: 2rem;
+		box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
+		border: 1px solid rgba(59, 130, 246, 0.15);
+		transition: all 0.3s ease;
+		position: relative;
+	}
+
+	.project-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+	}
+
+	.project-card.featured {
+		border: 2px solid #3b82f6;
+		background: linear-gradient(135deg, rgba(59, 130, 246, 0.03), rgba(29, 78, 216, 0.03));
+	}
+
+	.project-card.highlighted {
+		border: 2px solid #10b981;
+		background: linear-gradient(135deg, rgba(16, 185, 129, 0.03), rgba(5, 150, 105, 0.03));
+	}
+
+	.project-card.recognition {
+		border: 2px solid #f59e0b;
+		background: linear-gradient(135deg, rgba(245, 158, 11, 0.03), rgba(217, 119, 6, 0.03));
+	}
+
+	.project-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 1rem;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.project-header h3 {
+		font-size: 1.5rem;
+		color: #1e40af;
+		margin: 0;
+		font-weight: 600;
+	}
+
+	.project-status {
+		padding: 0.4rem 1rem;
+		border-radius: 20px;
+		font-size: 0.85rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.project-status.current {
+		background: linear-gradient(135deg, #10b981, #059669);
+		color: white;
+	}
+
+	.project-status.completed {
+		background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+		color: white;
+	}
+
+	.project-status.academic {
+		background: linear-gradient(135deg, #10b981, #059669);
+		color: white;
+	}
+
+	.project-type {
+		background: linear-gradient(135deg, #f59e0b, #d97706);
+		color: white;
+		padding: 0.4rem 1rem;
+		border-radius: 20px;
+		font-size: 0.85rem;
+		font-weight: 500;
+	}
+
+	.project-description {
+		color: #475569;
+		line-height: 1.7;
+		margin-bottom: 1.5rem;
+		font-size: 1rem;
+	}
+
+	.tech-stack {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.tech-badge {
+		background: rgba(59, 130, 246, 0.1);
+		color: #1d4ed8;
+		padding: 0.4rem 0.8rem;
+		border-radius: 15px;
+		font-size: 0.85rem;
+		font-weight: 500;
+		border: 1px solid rgba(59, 130, 246, 0.2);
+		transition: all 0.3s ease;
+	}
+
+	.tech-badge:hover {
+		background: rgba(59, 130, 246, 0.15);
+		border-color: rgba(59, 130, 246, 0.3);
+	}
+
+	.project-achievements {
+		display: flex;
+		gap: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.achievement {
+		text-align: center;
+	}
+
+	.achievement .metric {
+		display: block;
+		font-size: 1.8rem;
+		font-weight: 700;
+		color: #1d4ed8;
+	}
+
+	.achievement .label {
+		font-size: 0.9rem;
+		color: #64748b;
+		font-weight: 500;
+	}
+
+	.project-company {
+		color: #64748b;
+		font-size: 0.9rem;
+		font-style: italic;
+		border-top: 1px solid rgba(59, 130, 246, 0.1);
+		padding-top: 1rem;
+		margin-top: 1rem;
+	}
+
+	.project-year {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		background: linear-gradient(135deg, #64748b, #475569);
+		color: white;
+		padding: 0.3rem 0.8rem;
+		border-radius: 12px;
+		font-size: 0.8rem;
+		font-weight: 600;
+	}
+
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+	}
+
+	.project-recognition {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		background: rgba(245, 158, 11, 0.1);
+		padding: 0.8rem 1rem;
+		border-radius: 10px;
+		margin-top: 1rem;
+		border: 1px solid rgba(245, 158, 11, 0.2);
+	}
+
+	.award-icon {
+		font-size: 1.2rem;
+	}
+
+	.criteria-evaluated {
+		background: rgba(245, 158, 11, 0.05);
+		padding: 1rem;
+		border-radius: 10px;
+		border: 1px solid rgba(245, 158, 11, 0.1);
+	}
+
+	.criteria {
+		font-weight: 600;
+		color: #d97706;
+		margin-bottom: 0.5rem;
+	}
+
+	.criteria-evaluated ul {
+		margin: 0;
+		color: #64748b;
+	}
+
+	.criteria-evaluated li {
+		margin-bottom: 0.3rem;
+	}
+
+	.cta-section {
+		text-align: center;
+		padding: 3rem 2rem;
+		background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(29, 78, 216, 0.05));
+		border-radius: 16px;
+		border: 1px solid rgba(59, 130, 246, 0.15);
+		margin-top: 2rem;
+	}
+
+	.cta-section h3 {
+		font-size: 2rem;
+		color: #1d4ed8;
+		margin-bottom: 1rem;
+		font-weight: 600;
+	}
+
+	.cta-text {
+		font-size: 1.1rem;
+		color: #64748b;
+		margin-bottom: 2rem;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		line-height: 1.6;
+	}
+
+	.cta-buttons {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.cta-button {
+		padding: 0.75rem 2rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 1rem;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+	}
+
+	.cta-button.primary {
+		background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+		color: white;
+	}
+
+	.cta-button.primary:hover {
+		background: linear-gradient(135deg, #2563eb, #1e40af);
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+	}
+
+	.cta-button.secondary {
+		background: white;
+		color: #1d4ed8;
+		border: 2px solid #3b82f6;
+	}
+
+	.cta-button.secondary:hover {
+		background: #f8fafc;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(59, 130, 246, 0.2);
+	}
+
+	@media (max-width: 768px) {
+		.title-gradient {
+			font-size: 2.5rem;
+		}
+
+		.section-title {
+			font-size: 2rem;
+		}
+
+		.hero-description {
+			font-size: 1.1rem;
+		}
+
+		.project-header {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.project-achievements {
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		.projects-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.cta-button {
+			min-width: 200px;
+		}
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(15px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.fade-in {
+		opacity: 0;
+		animation: fadeIn 0.6s ease-out forwards;
+	}
+
+	.fade-in-delay-1  { animation-delay: 0.1s; }
+	.fade-in-delay-2  { animation-delay: 0.2s; }
+	.fade-in-delay-3  { animation-delay: 0.3s; }
+	.fade-in-delay-4  { animation-delay: 0.4s; }
+	.fade-in-delay-5  { animation-delay: 0.5s; }
+</style>
