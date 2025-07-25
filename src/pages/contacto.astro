@@ -272,6 +272,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		color: inherit;
 		position: relative;
 		overflow: hidden;
+		flex-wrap: wrap;
 	}
 
 	.contact-card:hover {
@@ -306,7 +307,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	}
 
 	.contact-card .info {
-		flex: 1;
+	flex: 1;
+	min-width: 0;
+	overflow-wrap: break-word;
+	word-break: break-word;
 	}
 
 	.contact-card .info h4 {
@@ -321,6 +325,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		color: #475569;
 		font-size: 1rem;
 	}
+
 
 	.badge {
 		display: inline-block;
@@ -357,6 +362,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		border-radius: 16px;
 		padding: 2rem;
 		text-align: center;
+		overflow-x: hidden;
+		box-sizing: border-box;
 	}
 
 	.service-icon {
@@ -395,6 +402,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		border-radius: 16px;
 		padding: 2.5rem;
 		width: 100%;
+		overflow-x: hidden;
+		box-sizing: border-box;
 	}
 
 	.availability-header {
