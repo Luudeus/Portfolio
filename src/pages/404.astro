@@ -1,0 +1,427 @@
+---
+// Página 404 personalizada
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Página no encontrada - Luciano André Cabrales Lefimil"/>
+		<meta name="viewport" content="width=device-width" />
+        <BaseHead title="404 - Página no encontrada | Luciano Cabrales" description="La página que buscas no existe o ha sido movida." />
+	</head>
+	<body>
+		<Header />
+		<div class="error-section">
+			<div class="error-container">
+				<div class="error-content">
+					<div class="error-number">404</div>
+					<h1>¡Ups! Página no encontrada</h1>
+					<p class="error-description">
+						La página que buscas no existe o ha sido movida. 
+						Pero no te preocupes, puedes encontrar todo lo que necesitas desde mi página principal.
+					</p>
+
+					<div class="action-buttons">
+						<a href="/" class="action-button primary-button">
+							<div class="button-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+									<path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+								</svg>
+							</div>
+							Ir al Inicio
+						</a>
+						
+						<a href="/contacto" class="action-button secondary-button">
+							<div class="button-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+									<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+								</svg>
+							</div>
+							Contacto
+						</a>
+					</div>
+				</div>
+				
+				<div class="error-visual">
+					<div class="floating-code">
+						<span class="code-line">&lt;!-- Error 404 --&gt;</span>
+						<span class="code-line error-highlight">if (page === null) {</span>
+						<span class="code-line">    redirect('/home');</span>
+						<span class="code-line">}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<div class="suggestions-section fade-in fade-in-delay-1">
+				<h3>¿Qué te gustaría hacer?</h3>
+				<div class="suggestion-cards">
+					<a href="/sobre-mi" class="suggestion-card">
+						<div class="card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+								<path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+							</svg>
+						</div>
+						<h4>Conoce sobre mí</h4>
+						<p>Descubre mi historia y experiencia profesional</p>
+					</a>
+					
+					<a href="/proyectos" class="suggestion-card">
+						<div class="card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+								<path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5M12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0m2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0M1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1M1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25"/>
+							</svg>
+						</div>
+						<h4>Ver mis proyectos</h4>
+						<p>Explora mi portafolio de desarrollo web</p>
+					</a>
+					
+					<a href="/experiencia" class="suggestion-card">
+						<div class="card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+								<path d="M8.5 5a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V9a.5.5 0 0 0 1 0V7.5H10a.5.5 0 0 0 0-1H8.5z"/>
+								<path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"/>
+							</svg>
+						</div>
+						<h4>Mi experiencia</h4>
+						<p>Revisa mi trayectoria profesional</p>
+					</a>
+				</div>
+			</div>
+		</main>
+
+		<Footer />
+	</body>
+</html>
+
+<style>
+:root {
+	--whatsapp: #f63b3b;
+	--whatsapp-dark: #d81d1d;
+	--background-hover: rgba(246, 59, 59, 0.08);
+	}
+	body {
+		background: url('../assets/error-bg.svg') no-repeat;
+		background-size: cover;
+	}
+	main {
+		width: 95%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.error-section {
+		background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+		padding: 4rem 2rem;
+		margin: 0 0 3rem 0;
+		color: white;
+		overflow: hidden;
+		position: relative;
+		min-height: 70vh;
+		display: flex;
+		align-items: center;
+	}
+
+	.error-section::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+		z-index: 1;
+	}
+
+	.error-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 4rem;
+		max-width: 1200px;
+		margin: 0 auto;
+		position: relative;
+		z-index: 2;
+		width: 100%;
+	}
+
+	.error-content {
+		flex: 1;
+		max-width: 600px;
+	}
+
+	.error-number {
+		font-size: 8rem;
+		font-weight: 900;
+		color: rgba(255, 255, 255, 0.5);
+		line-height: 0.8;
+		margin-bottom: 1rem;
+		text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+	}
+
+	.error-content h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		font-weight: 700;
+		color: white;
+	}
+
+	.error-description {
+		font-size: 1.2rem;
+		color: #fecaca;
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
+
+	.error-visual {
+		flex: 1;
+		max-width: 400px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.floating-code {
+		background: rgba(0, 0, 0, 0.3);
+		border-radius: 12px;
+		padding: 2rem;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(10px);
+		animation: float 3s ease-in-out infinite;
+	}
+
+	.code-line {
+		display: block;
+		font-family: 'Courier New', monospace;
+		font-size: 0.9rem;
+		margin-bottom: 0.5rem;
+		color: #fecaca;
+	}
+
+	.error-highlight {
+		color: #fca5a5 !important;
+		font-weight: bold;
+	}
+
+
+	.action-buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-top: 1.5rem;
+	}
+
+	.action-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.75rem 1.25rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 0.95rem;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+		cursor: pointer;
+		border: 2px solid transparent;
+	}
+
+	.action-button:hover {
+		transform: translateY(-3px) scale(1.05);
+		text-decoration: none;
+	}
+
+	.button-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 20px;
+		height: 20px;
+	}
+
+	.primary-button {
+		background: white;
+		color: #dc2626;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	}
+
+	.primary-button:hover {
+		background: #f8fafc;
+		color: #b91c1c;
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+	}
+
+	.secondary-button {
+		background: transparent;
+		color: white;
+		border: 2px solid rgba(255, 255, 255, 0.3);
+	}
+
+	.secondary-button:hover {
+		background: rgba(255, 255, 255, 0.1);
+		border-color: rgba(255, 255, 255, 0.5);
+	}
+
+	.suggestions-section {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.suggestions-section h3 {
+		font-size: 2rem;
+		color: #dc2626;
+		margin-bottom: 2rem;
+		font-weight: 600;
+	}
+
+	.suggestion-cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1.5rem;
+		margin-top: 2rem;
+	}
+
+	.suggestion-card {
+		background: linear-gradient(135deg, rgba(220, 38, 38, 0.05), rgba(185, 28, 28, 0.05));
+		border: 1px solid rgba(220, 38, 38, 0.15);
+		border-radius: 16px;
+		padding: 2rem;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		color: inherit;
+	}
+
+	.suggestion-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 15px 35px rgba(220, 38, 38, 0.1);
+		border-color: rgba(220, 38, 38, 0.3);
+		text-decoration: none;
+	}
+
+	.card-icon {
+		width: 50px;
+		height: 50px;
+		background: linear-gradient(135deg, #dc2626, #b91c1c);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 1rem;
+		color: white;
+	}
+
+	.suggestion-card h4 {
+		font-size: 1.25rem;
+		color: #dc2626;
+		margin-bottom: 0.5rem;
+		font-weight: 600;
+	}
+
+	.suggestion-card p {
+		color: #475569;
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+
+
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+	@keyframes float {
+		0%, 100% { transform: translateY(0px) rotate(0deg); }
+		50% { transform: translateY(-10px) rotate(1deg); }
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(15px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.fade-in {
+		opacity: 0;
+		animation: fadeIn 0.6s ease-out forwards;
+	}
+
+	.fade-in-delay-1 { animation-delay: 0.1s; }
+
+	@media (max-width: 768px) {
+		.error-container {
+			flex-direction: column;
+			text-align: center;
+			gap: 2rem;
+		}
+
+		.error-number {
+			font-size: 6rem;
+		}
+
+		.error-content h1 {
+			font-size: 2rem;
+		}
+
+		.error-description {
+			font-size: 1rem;
+		}
+
+		.floating-code {
+			padding: 1.5rem;
+		}
+
+		.code-line {
+			font-size: 0.8rem;
+		}
+
+		.action-buttons {
+			justify-content: center;
+		}
+
+		.suggestion-cards {
+			grid-template-columns: 1fr;
+		}
+
+		.suggestions-section h3 {
+			font-size: 1.6rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.error-section {
+			padding: 2rem 1rem;
+		}
+
+		.action-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.action-button {
+			min-width: 200px;
+			justify-content: center;
+		}
+
+		.suggestion-card {
+			padding: 1.5rem;
+		}
+	}
+</style>

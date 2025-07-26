@@ -92,7 +92,7 @@ import { SITE_TITLE } from '../consts';
 		background: rgba(255, 255, 255, 0.95);
 		backdrop-filter: blur(10px);
 		border-bottom: 1px solid rgba(59, 130, 246, 0.1);
-		box-shadow: 0 2px 20px rgba(59, 130, 246, 0.08);
+		box-shadow: 0 2px 20px var(--background-hover);
 	}
 
 	.nav-container {
@@ -132,7 +132,7 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	.logo-link:hover h2 {
-		color: #1d4ed8;
+		color: var(--whatsapp-dark);
 	}
 
 	.logo-text {
@@ -143,7 +143,7 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	.logo-link:hover .logo-text {
-		color: #1d4ed8;
+		color: var(--whatsapp-dark);
 	}
 
 	/* Screen reader only text */
@@ -176,12 +176,12 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	.nav-links :global(a:hover) {
-		color: #1d4ed8;
-		background: rgba(59, 130, 246, 0.08);
+		color: var(--whatsapp-dark);
+		background: var(--background-hover);
 	}
 
 	.nav-links :global(a.active) {
-		color: #1d4ed8;
+		color: var(--whatsapp-dark);
 		background: rgba(59, 130, 246, 0.1);
 	}
 
@@ -202,8 +202,8 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	.social-links a:hover {
-		color: #1d4ed8;
-		background: rgba(59, 130, 246, 0.08);
+		color: var(--whatsapp-dark);
+		background: var(--background-hover);
 		transform: translateY(-1px);
 	}
 
@@ -225,8 +225,8 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	.menu-toggle:hover {
-		color: #1d4ed8;
-		background: rgba(59, 130, 246, 0.08);
+		color: var(--whatsapp-dark);
+		background: var(--background-hover);
 	}
 
 	.menu-icon,
@@ -251,7 +251,7 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	.menu-toggle.menu-open {
-		color: #1d4ed8;
+		color: var(--whatsapp-dark);
 	}
 
 	.mobile-menu {
@@ -293,9 +293,9 @@ import { SITE_TITLE } from '../consts';
 
 	.mobile-links :global(a:hover),
 	.mobile-links :global(a.active) {
-		color: #1d4ed8;
-		background: rgba(59, 130, 246, 0.08);
-		border-left-color: #3b82f6;
+		color: var(--whatsapp-dark);
+		background: var(--background-hover);
+		border-left-color: var(--whatsapp);
 	}
 
 	.mobile-social {
@@ -317,8 +317,8 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	.mobile-social a:hover {
-		color: #1d4ed8;
-		background: rgba(59, 130, 246, 0.08);
+		color: var(--whatsapp-dark);
+		background: var(--background-hover);
 	}
 
 	@media (max-width: 768px) {
