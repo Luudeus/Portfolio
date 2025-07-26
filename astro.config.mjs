@@ -11,7 +11,7 @@ export default defineConfig({
 	vite: {
 		server: {
 			host: true,
-			allowedHosts: ['warenes.duckdns.org'],
+			allowedHosts: [],
 		}
 	},
 	build: {
