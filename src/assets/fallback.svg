@@ -1,0 +1,68 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradiente sutil basado en tu paleta -->
+    <linearGradient id="subtleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#f8fafc"/>
+    </linearGradient>
+    
+    <!-- Gradiente para el texto principal usando tu accent-gradient -->
+    <linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="30%" style="stop-color:#1e40af"/>
+      <stop offset="70%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#93c5fd"/>
+    </linearGradient>
+    
+    <!-- Gradiente circular sutil para el fondo -->
+    <radialGradient id="circularGradient" cx="20%" cy="30%">
+      <stop offset="0%" style="stop-color:rgba(59, 130, 246, 0.03)"/>
+      <stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.01)"/>
+      <stop offset="100%" style="stop-color:transparent"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Fondo principal limpio -->
+  <rect width="1200" height="630" fill="url(#subtleGradient)"/>
+  
+  <!-- Gradiente circular sutil -->
+  <rect width="1200" height="630" fill="url(#circularGradient)"/>
+  
+  <!-- Elemento geométrico minimalista -->
+  <circle cx="1000" cy="150" r="120" fill="none" stroke="rgba(59, 130, 246, 0.08)" stroke-width="1"/>
+  <circle cx="200" cy="500" r="80" fill="none" stroke="rgba(147, 197, 253, 0.12)" stroke-width="1"/>
+  
+  <!-- Contenedor principal centrado -->
+  <g transform="translate(600, 315)">
+    <!-- Nombre principal - Typography-first approach -->
+    <text x="0" y="-30" 
+          font-family="system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif" 
+          font-size="72" 
+          font-weight="700" 
+          text-anchor="middle" 
+          fill="url(#nameGradient)"
+          letter-spacing="-0.02em">
+      Luciano Cabrales
+    </text>
+    
+    <!-- Subtítulo con peso visual menor -->
+    <text x="0" y="25" 
+          font-family="system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif" 
+          font-size="24" 
+          font-weight="400" 
+          text-anchor="middle" 
+          fill="rgb(96, 115, 159)"
+          letter-spacing="0.05em">
+      PORTAFOLIO
+    </text>
+    
+    <!-- Línea minimalista debajo -->
+    <line x1="-60" y1="50" x2="60" y2="50" 
+          stroke="rgba(59, 130, 246, 0.2)" 
+          stroke-width="1"/>
+  </g>
+  
+  <!-- Elementos decorativos minimalistas -->
+  <rect x="100" y="100" width="2" height="40" fill="rgba(59, 130, 246, 0.15)"/>
+  <rect x="1098" y="490" width="2" height="40" fill="rgba(147, 197, 253, 0.15)"/>
+</svg>
