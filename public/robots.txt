@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lucianocabrales.vercel.app/sitemap-index.xml
+
+# Block common bot paths
+Disallow: /api/
+Disallow: /_astro/
+Disallow: /node_modules/
+
+# Allow important pages
+Allow: /
+Allow: /sobre-mi
+Allow: /experiencia  
+Allow: /proyectos
+Allow: /blog
+Allow: /contacto
+Allow: /rss.xml

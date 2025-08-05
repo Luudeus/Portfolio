@@ -26,15 +26,15 @@ import CV from '../assets/Luciano_Cabrales_CV.pdf';
 				<div class="profile-image">
 					<Image 
 						src={ProfilePhoto} 
-						alt="Luciano Cabrales - Desarrollador Full Stack"
+						alt="Luciano André Cabrales Lefimil, Desarrollador Full Stack especializado en Python, JavaScript y automatización web, Santiago Chile"
 						loading="eager"
 						priority={true}
 					/>
 				</div>
 				<div class="profile-content">
-					<h1><span class="name-white">Luciano André Cabrales Lefimil</span></h1>
-					<h2 class="role">Desarrollador Web | Automatización Backend</h2>
-					<p class="description">Desarrollador web con experiencia en automatización y soporte técnico, especializado en integraciones entre EspoCRM, WordPress y plataformas externas mediante API REST. Desarrollo sitios web escalables a medida usando Python (Flask, Jinja2), PHP, JavaScript/TypeScript y Astro, con servicios en la nube AWS S3.</p>
+					<h1 itemprop="name"><span class="name-white">Luciano André Cabrales Lefimil</span></h1>
+					<h2 class="role" itemprop="jobTitle">Desarrollador Web | Automatización Backend</h2>
+					<p class="description" itemprop="description">Desarrollador web con experiencia en automatización y soporte técnico, especializado en integraciones entre EspoCRM, WordPress y plataformas externas mediante API REST. Desarrollo sitios web escalables a medida usando Python (Flask, Jinja2), PHP, JavaScript/TypeScript y Astro, con servicios en la nube AWS S3.</p>
 					<div class="tech-stack">
 						<span class="tech-badge">C#</span>
 						<span class="tech-badge">Python</span>
@@ -98,15 +98,17 @@ import CV from '../assets/Luciano_Cabrales_CV.pdf';
 			</div>
 		</div>
 		<main>
-			<div class="intro-section fade-in fade-in-delay-1">
-				<h3>¿Buscas soluciones web innovadoras y automatización inteligente?</h3>
-				<p class="intro-text">Descubre mi experiencia creando aplicaciones escalables, integraciones robustas y herramientas que optimizan procesos empresariales.</p>
-			</div>
+			<article itemscope itemtype="https://schema.org/Person">
+				<div class="intro-section fade-in fade-in-delay-1">
+					<h3>¿Buscas soluciones web innovadoras y automatización inteligente?</h3>
+					<p class="intro-text" itemprop="description">Descubre mi experiencia creando aplicaciones escalables, integraciones robustas y herramientas que optimizan procesos empresariales.</p>
+				</div>
 
-			<div class="cta-section fade-in fade-in-delay-2">
-				<p class="cta-text">¿Tienes un proyecto en mente? Conectemos y hagámoslo realidad</p>
-				<p class="instructions">Explora más sobre mi trabajo y experiencia en mi página de <a href="/contacto"><code>Contacto</code></a></p>
-			</div>
+				<div class="cta-section fade-in fade-in-delay-2">
+					<p class="cta-text">¿Tienes un proyecto en mente? Conectemos y hagámoslo realidad</p>
+					<p class="instructions">Explora más sobre mi trabajo y experiencia en mi página de <a href="/contacto"><code>Contacto</code></a></p>
+				</div>
+			</article>
 		</main>
 		<Footer />
 	</body>
