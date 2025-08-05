@@ -41,17 +41,67 @@ const { title, description, image = FallbackImage } = Astro.props;
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta name="author" content="Luciano André Cabrales Lefimil" />
+<meta name="keywords" content="desarrollador full stack, programador chile, desarrollo web, automatización, API REST, Python, JavaScript, TypeScript, Santiago Chile" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="googlebot" content="index, follow" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="theme-color" content="#3b82f6" />
+<meta name="msapplication-TileColor" content="#3b82f6" />
+<meta name="geo.region" content="CL-RM" />
+<meta name="geo.placename" content="Santiago, Chile" />
+<meta name="geo.position" content="-33.4489;-70.6693" />
+<meta name="ICBM" content="-33.4489, -70.6693" />
 
-<!-- Open Graph / Facebook -->
+<!-- Enhanced Open Graph -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:site_name" content="Luciano Cabrales - Desarrollador Full Stack" />
+<meta property="og:locale" content="es_CL" />
+<meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image.src, Astro.url)} />
+<meta property="og:image:alt" content={`${title} - Luciano Cabrales Portfolio`} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Luciano André Cabrales Lefimil",
+  "jobTitle": "Desarrollador Full Stack",
+  "description": "Técnico en Programación y Análisis de Sistemas especializado en desarrollo web, integración de APIs, automatización y soluciones tecnológicas personalizadas",
+  "url": "https://lucianocabrales.vercel.app",
+  "sameAs": [
+    "https://www.linkedin.com/in/luciano-cabrales-lefimil-58736427a/",
+    "https://wa.me/56997913908"
+  ],
+  "email": "lacabrales@gmail.com",
+  "telephone": "+56997913908",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Santiago",
+    "addressCountry": "Chile"
+  },
+  "knowsAbout": [
+    "Python", "JavaScript", "TypeScript", "C#", "PHP", "Web Development", 
+    "API Integration", "Automation", "Flask", "Astro", "AWS S3", "EspoCRM"
+  ],
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Técnico en Programación y Análisis de Sistemas"
+  }
+}
+</script>
+
+<!-- Enhanced Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@lucianocabrales" />
+<meta name="twitter:creator" content="@lucianocabrales" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(image.src, Astro.url)} />
+<meta name="twitter:image:alt" content={`${title} - Portfolio`} />
