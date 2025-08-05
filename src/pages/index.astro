@@ -325,11 +325,13 @@ import CV from '../assets/Luciano_Cabrales_CV.pdf';
 
 		.action-buttons {
 			justify-content: center;
+			gap: 0.875rem;
 		}
 
 		.action-button {
 			font-size: 0.9rem;
-			padding: 0.65rem 1rem;
+			padding: 0.7rem 1.1rem;
+			min-height: 44px;
 		}
 	}
 
@@ -410,11 +412,22 @@ import CV from '../assets/Luciano_Cabrales_CV.pdf';
 		.action-buttons {
 			flex-direction: column;
 			align-items: center;
+			gap: 0.75rem;
 		}
 
 		.action-button {
-			min-width: 200px;
+			width: 100%;
+			max-width: 280px;
+			min-width: 240px;
 			justify-content: center;
+			padding: 0.875rem 1.5rem;
+			font-size: 0.9rem;
+			min-height: 48px;
+		}
+
+		.button-icon svg {
+			width: 18px;
+			height: 18px;
 		}
 	}
 
